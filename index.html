@@ -3,18 +3,31 @@
 <head>
     <title>Help Center</title>
     <style>
-        /* This stretches the help center panel to fill the entire portal tab window */
-        html, body {
+        body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f7f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+        .welcome-container {
+            text-align: center;
+            color: #4a5568;
+        }
+        h1 { margin-bottom: 8px; font-size: 24px; color: #2d3748; }
+        p { font-size: 16px; color: #718096; }
     </style>
 </head>
 <body>
-    <!-- Zoho Desk ASAP Code Snippet -->
+    <div class="welcome-container">
+        <h1>Welcome to our Help Center</h1>
+        <p>Use the panel on the right to browse articles or submit a support ticket.</p>
+    </div>
+
+    <!-- Zoho Desk ASAP Script -->
     <script type="text/javascript" id="zohodeskasap">
         var d=document;
         s=d.createElement("script"),
@@ -22,22 +35,18 @@
         s.id="zohodeskasapscript",
         s.defer=!0,
         s.nonce="{place_your_nonce_value_here}",
-        s.src="https://desk.zoho.com.au/portal/api/web/asapApp/28179000000795005?orgId=7006116870",
+        s.src="https://zoho.com.au",
         t=d.getElementsByTagName("script")[0],
         t.parentNode.insertBefore(s,t);
 
+        // FORCES THE ASAP WIDGET TO AUTOMATICALLY OPEN TO THE KNOWLEDGE BASE
         window.ZohoDeskAsapReady = function() {
-    window.ZohoDeskAsap.Extension.Launcher.show({
-        "maximize": true
-    });
-};
-
-
-        // FORCES THE HELP CENTER TO AUTOMATICALLY OPEN ON LOAD
-        window.ZohoDeskAsapReady = function() {
+            // Opens the drawer slider panel
             window.ZohoDeskAsap.Extension.Launcher.show({
                 "maximize": true
             });
+            // Navigates directly to the Knowledge Base (GoToArticleList)
+            window.ZohoDeskAsap.APIMethod.GoToArticleList();
         };
     </script>
 </body>
