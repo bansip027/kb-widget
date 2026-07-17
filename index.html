@@ -13,21 +13,52 @@
             align-items: center;
             height: 100vh;
         }
-        .welcome-container {
+        .container {
             text-align: center;
-            color: #4a5568;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            max-width: 450px;
+            width: 90%;
         }
-        h1 { margin-bottom: 8px; font-size: 24px; color: #2d3748; }
-        p { font-size: 16px; color: #718096; }
+        h1 { margin-bottom: 12px; font-size: 24px; color: #1a202c; }
+        p { font-size: 15px; color: #4a5568; margin-bottom: 24px; line-height: 1.5; }
+        
+        /* The External Button Style */
+        .help-btn {
+            display: inline-block;
+            background-color: #0060FF; /* Customize this to match your brand color */
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(0, 96, 255, 0.2);
+        }
+        .help-btn:hover {
+            background-color: #004ecc;
+        }
+        .help-btn:active {
+            transform: scale(0.98);
+        }
     </style>
 </head>
 <body>
-    <div class="welcome-container">
-        <h1>Welcome to our Help Center</h1>
-        <p>Use the panel on the right to browse articles or submit a support ticket.</p>
+
+    <div class="container">
+        <h1>Need Assistance?</h1>
+        <p>Click the button below to launch our full Help Center in a new tab, where you can browse our complete knowledge base library, view community forums, and manage your tickets.</p>
+        
+        <!-- REPLACE THE URL BELOW WITH YOUR ACTUAL ZOHO DESK HELP CENTER LINK -->
+        <a href="https://zoho.com.au" target="_blank" class="help-btn">
+            Open Help Center ↗
+        </a>
     </div>
 
-    <!-- Zoho Desk ASAP Script -->
+    <!-- Zoho Desk ASAP Script (Kept as a backup launcher icon in the corner) -->
     <script type="text/javascript" id="zohodeskasap">
         var d=document;
         s=d.createElement("script"),
@@ -38,16 +69,7 @@
         s.src="https://zoho.com.au",
         t=d.getElementsByTagName("script")[0],
         t.parentNode.insertBefore(s,t);
-
-        // FORCES THE ASAP WIDGET TO AUTOMATICALLY OPEN TO THE KNOWLEDGE BASE
-        window.ZohoDeskAsapReady = function() {
-            // Opens the drawer slider panel
-            window.ZohoDeskAsap.Extension.Launcher.show({
-                "maximize": true
-            });
-            // Navigates directly to the Knowledge Base (GoToArticleList)
-            window.ZohoDeskAsap.APIMethod.GoToArticleList();
-        };
     </script>
+
 </body>
 </html>
