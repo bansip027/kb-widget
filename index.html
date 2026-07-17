@@ -1,75 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Help Center</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f4f7f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            max-width: 450px;
-            width: 90%;
-        }
-        h1 { margin-bottom: 12px; font-size: 24px; color: #1a202c; }
-        p { font-size: 15px; color: #4a5568; margin-bottom: 24px; line-height: 1.5; }
-        
-        /* The External Button Style */
-        .help-btn {
-            display: inline-block;
-            background-color: #0060FF; /* Customize this to match your brand color */
-            color: white;
-            text-decoration: none;
-            padding: 14px 28px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 12px rgba(0, 96, 255, 0.2);
-        }
-        .help-btn:hover {
-            background-color: #004ecc;
-        }
-        .help-btn:active {
-            transform: scale(0.98);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Center</title>
+<style>
+  :root {
+    --navy: #1C2128;
+    --teal: #29BCAF;
+    --teal-dark: #1f9a8f;
+    --teal-deeper: #157A71;
+    --teal-wash: #E7F8F6;
+    --ink-soft: #565C63;
+    --paper: #F6F7F6;
+    --line: rgba(28,33,40,0.1);
+    --f-display: 'Satoshi', -apple-system, 'Segoe UI', Arial, sans-serif;
+    --f-body: 'Inter', -apple-system, 'Segoe UI', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    font-family: var(--f-body);
+    background: var(--paper);
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+  .container {
+    text-align: center;
+    background: #ffffff;
+    padding: 44px 40px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 24px rgba(28, 33, 40, 0.06);
+    max-width: 440px;
+    width: 100%;
+  }
+  .logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 28px;
+    display: block;
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--navy);
+    text-wrap: balance;
+  }
+  p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0 0 28px;
+    line-height: 1.55;
+  }
+  .help-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--teal);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 26px;
+    font-family: var(--f-body);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    box-shadow: 0 4px 14px rgba(41, 188, 175, 0.28);
+  }
+  .help-btn:hover { background-color: var(--teal-dark); }
+  .help-btn:active { transform: scale(0.98); }
+  .help-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Need Assistance?</h1>
-        <p>Click the button below to launch our full Help Center in a new tab, where you can browse our complete knowledge base library, view community forums, and manage your tickets.</p>
-        
-        <!-- REPLACE THE URL BELOW WITH YOUR ACTUAL ZOHO DESK HELP CENTER LINK -->
-        <a href="https://grevon.zohodesk.com.au/portal/en/kb/grevon" target="_blank" class="help-btn">
-            Open Help Center ↗
-        </a>
-    </div>
-
-    <!-- Zoho Desk ASAP Script (Kept as a backup launcher icon in the corner) -->
-    <script type="text/javascript" id="zohodeskasap">
-        var d=document;
-        s=d.createElement("script"),
-        s.type="text/javascript",
-        s.id="zohodeskasapscript",
-        s.defer=!0,
-        s.nonce="{place_your_nonce_value_here}",
-        s.src="https://zoho.com.au",
-        t=d.getElementsByTagName("script")[0],
-        t.parentNode.insertBefore(s,t);
-    </script>
+  <div class="container">
+    <svg class="logo" viewBox="0 0 629.92 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grevon">
+      <g>
+        <path style="fill: #1C2128" d="M73.15,98.62c-.87,1.02-1.6,2.76-1.6,5.08,0,3.92,2.18,7.26,13.36,7.84l18.01,1.02c20.04,1.16,32.68,7.84,32.68,22.66,0,16.99-17.57,26.43-47.34,26.43-23.09,0-36.6-5.23-36.6-14.96,0-5.66,4.65-10.17,10.6-12.93-6.25-3.63-9-9.15-9-16.12,0-12.2,8.28-18.44,15.11-21.49-7.99-4.79-12.49-12.49-12.49-21.35,0-15.54,13.65-27.16,34.71-27.16,6.97,0,13.07,1.31,18.01,3.92l26.58-13.22.29.29v20.04h-.58l-23.67-3.2v.29c9,4.36,14.09,10.89,14.09,19.75,0,14.52-13.65,26.29-34.71,26.29-6.54,0-12.49-1.16-17.43-3.2ZM94.06,155.26c14.38,0,22.51-2.61,22.51-8.57,0-4.79-5.52-6.83-23.09-7.84l-14.67-.87c-3.92-.29-7.41-.73-10.31-1.6-.87,1.74-1.45,3.92-1.45,6.1,0,10.02,12.78,12.78,27.01,12.78ZM99.14,74.8c0-14.23-2.9-21.64-8.57-21.64s-8.57,7.41-8.57,21.64,2.91,21.49,8.57,21.49,8.57-7.55,8.57-21.49Z"/>
+        <path style="fill: #1C2128" d="M142.86,125.49c2.61-7.84,4.65-13.8,4.65-28.03v-11.62c0-13.36-2.03-21.06-9.87-29.48v-.29l37.03-9.29v19.17c7.55-13.22,15.68-22.66,32.97-18.3l-5.66,32.24h-.73c-6.82-5.08-15.68-8.57-20.04-8.57-2.32,0-4.21,1.31-5.81,3.05v23.24c0,13.65,1.89,20.04,4.5,27.88v.29h-37.04v-.29Z"/>
+        <path style="fill: #1C2128" d="M282,100.94l1.45.73c-4.07,16.27-16.27,26.43-34.71,26.43-23.82,0-37.47-17.28-37.47-38.92,0-23.82,15.68-41.54,38.78-41.54s33.99,18.74,33.99,36.89l-44.01-.15c2.32,18.3,11.91,23.24,23.82,23.24,8.86,0,13.8-2.76,18.15-6.68ZM239.59,78.29l18.01-.44v-7.99c0-11.91-3.48-16.7-7.84-16.7-6.53,0-10.16,10.75-10.16,22.51v2.61Z"/>
+        <path style="fill: #1C2128" d="M328.47,126.5h-10.75l-20.91-50.39c-6.24-14.96-9-20.77-13.5-25.71v-.44h42.7v.44c-3.19,3.78-4.21,15.54,0,26.14l8.57,21.49,8.42-19.03c6.1-13.65,2.03-25.12-1.16-28.61v-.44h25.13v.44c-5.52,5.95-9.29,10.46-16.12,25.56l-22.36,50.54Z"/>
+        <path style="fill: #1C2128" d="M365.51,87.87c0-25.71,22.07-40.23,43.28-40.23s43.28,14.23,43.28,40.23-22.07,40.23-43.28,40.23-43.28-14.52-43.28-40.23ZM422.3,87.87c0-21.79-3.92-34.71-13.51-34.71s-13.51,12.93-13.51,34.71,4.21,34.71,13.65,34.71,13.36-12.93,13.36-34.71Z"/>
+        <path style="fill: #1C2128" d="M460.49,125.49c2.91-7.84,4.94-13.8,4.94-28.03v-11.62c0-13.36-2.03-21.06-9.87-29.48v-.29l37.03-9.29v15.68l.73.15c2.91-5.66,12.49-14.96,27.45-14.96,13.8,0,23.24,7.99,23.24,20.91v28.9c0,13.8,1.89,20.19,4.65,28.03v.29h-37.18v-.29c2.91-7.84,4.65-14.09,4.65-27.74v-26c0-5.23-2.91-8.86-9.15-8.86s-11.04,3.34-13.65,7.26v27.45c0,13.65,1.89,20.04,4.5,27.88v.29h-37.33v-.29Z"/>
+        <path style="fill: #29BCAF" d="M560.85,111.98c0-7.7,6.53-14.23,14.38-14.23s14.38,6.54,14.38,14.23-6.39,14.52-14.38,14.52-14.38-6.54-14.38-14.52Z"/>
+      </g>
+    </svg>
+    <h1>Need a hand?</h1>
+    <p>Open the full Grevon Help Center in a new tab to browse the knowledge base, check community discussions, or manage your support tickets.</p>
+    <a href="https://grevon.zohodesk.com.au/portal/en/kb/grevon" target="_blank" rel="noopener" class="help-btn">
+      Open Help Center ↗
+    </a>
+  </div>
 
 </body>
 </html>
