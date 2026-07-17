@@ -26,6 +26,13 @@
         t=d.getElementsByTagName("script")[0],
         t.parentNode.insertBefore(s,t);
 
+        window.ZohoDeskAsapReady = function() {
+    window.ZohoDeskAsap.Extension.Launcher.show({
+        "maximize": true
+    });
+};
+
+
         // FORCES THE HELP CENTER TO AUTOMATICALLY OPEN ON LOAD
         window.ZohoDeskAsapReady = function() {
             window.ZohoDeskAsap.Extension.Launcher.show({
